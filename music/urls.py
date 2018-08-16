@@ -16,5 +16,5 @@ urlpatterns = [
     path('logout_user/', views.logout_user, name='logout_user'),
     path('<int:album_id>/delete_song/<int:song_id>/', views.delete_song, name='delete_song'),
     path('<int:album_id>/create_song', views.create_song, name='create_song'),
-
+    path('songs/<slug:filter_by>/', views.songs, name='songs'),
 ]
